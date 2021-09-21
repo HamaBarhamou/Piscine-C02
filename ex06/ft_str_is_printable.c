@@ -6,10 +6,11 @@
 /*   By: bissaka- <bissaka-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 14:37:28 by bissaka-          #+#    #+#             */
-/*   Updated: 2021/09/16 15:08:06 by bissaka-         ###   ########.fr       */
+/*   Updated: 2021/09/21 01:15:04 by bissaka-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include<stdio.h>
 int	ft_str_is_printable(char *str)
 {
 	int	i;
@@ -24,9 +25,9 @@ int	ft_str_is_printable(char *str)
 	return (1);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char chaine[]=" ";
 	printf("%d\n",ft_str_is_printable(chaine));
 	return (0);
-}
+}*/

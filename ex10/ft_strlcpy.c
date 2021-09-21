@@ -6,13 +6,13 @@
 /*   By: bissaka- <bissaka-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 18:07:53 by bissaka-          #+#    #+#             */
-/*   Updated: 2021/09/16 18:39:51 by bissaka-         ###   ########.fr       */
+/*   Updated: 2021/09/21 01:07:29 by bissaka-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	nsigned int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < size - 1 && src[i])
