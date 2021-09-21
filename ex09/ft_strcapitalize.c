@@ -6,7 +6,7 @@
 /*   By: bissaka- <bissaka-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:53:29 by bissaka-          #+#    #+#             */
-/*   Updated: 2021/09/16 16:54:35 by bissaka-         ###   ########.fr       */
+/*   Updated: 2021/09/21 21:31:10 by bissaka-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,10 @@ char	upper(char c)
 	return (car);
 }
 
-int	is_separator(char c)
+int	is_alpha_or_number(char c)
 {
-	int	test1;
-	int	test2;
-
-	test1 = c == ' ' || c == '\n' || c == ',' || c == ';';
-	test2 = c == '+' || c == '-' || c == '?' || c == '/';
-	if (test1 || test2)
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+		|| (c >= '0' && c <= '9'))
 		return (1);
 	else
 		return (0);
@@ -52,11 +48,11 @@ char	*ft_strcapitalize(char *str)
 	i = 0;
 	while (str[i])
 	{
-		while (is_separator(str[i]))
+		while (!is_alpha_or_number(str[i]))
 			i++;
 		str[i] = upper(str[i]);
 		i++;
-		while (!is_separator(str[i]))
+		while (is_alpha_or_number(str[i]))
 		{
 			str[i] = lower(str[i]);
 			i++;
@@ -66,8 +62,10 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-/*int	main(void)
+/*
+#include<stdio.h>
+int	main(void)
 {
-	char chaine[]="ISSAKA HAMA BARHAMOU, ALIAS BISSAKA/PRESIDENT\n";
+	char chaine[]="salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
 	printf("%s\n",ft_strcapitalize(chaine));
 }*/
